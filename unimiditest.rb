@@ -68,18 +68,20 @@ def minor_arpeggio(note)
 end
 
 def dorian_mode(note)
-    dorian_mode = [2,4,5,7,9,10,11,14]
+    dorian_mode = [2,4,5,7,9,11,12,14]
     dorian_mode.map do |value|
         note + value
     end
 end
 
 def phrygian_dominant(note)
-    dorian_mode = [0,1,4,5,7,8,10,12]
+    dorian_mode = [3,4,7,8,10,11,13,15]
     dorian_mode.map do |value|
         note + value
     end
 end
+
+def
 
 def modulate(note, notet)
 
