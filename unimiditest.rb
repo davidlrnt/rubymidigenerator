@@ -81,8 +81,6 @@ def phrygian_dominant(note)
     end
 end
 
-def
-
 # def modulate(note, notet)
 
 # end
@@ -145,39 +143,39 @@ output.open do |output|
     t = 10
     x = 10
     note = notesarray.sample
-    while a < 1000 do
+    # while a < 1000 do
 
-        sleep(0.1)
+    #     sleep(0.1)
 
-        output.puts(0x90, note, v)
-        # sleep(0.1)
-        output.puts(0x80, note, v)
+    #     output.puts(0x90, note, v)
+    #     # sleep(0.1)
+    #     output.puts(0x80, note, v)
 
-        if a > 300
-        output.puts(0x90, note+4, r)
-        # sleep(0.1)
-        output.puts(0x80, note+4, r)
-        r += 0.1
-        end
+    #     if a > 300
+    #     output.puts(0x90, note+4, r)
+    #     # sleep(0.1)
+    #     output.puts(0x80, note+4, r)
+    #     r += 0.1
+    #     end
 
-        if a > 400
-        output.puts(0x90, note+19, t)
-        # sleep(0.1)
-        output.puts(0x80, note+19, t)
-        t += 0.1
-        end
+    #     if a > 400
+    #     output.puts(0x90, note+19, t)
+    #     # sleep(0.1)
+    #     output.puts(0x80, note+19, t)
+    #     t += 0.1
+    #     end
 
 
-        if a > 200
-        output.puts(0x90, note-19, x)
-        # sleep(0.1)
-        output.puts(0x80, note-19, x)
-        x += 0.1
-        end
+    #     if a > 200
+    #     output.puts(0x90, note-19, x)
+    #     # sleep(0.1)
+    #     output.puts(0x80, note-19, x)
+    #     x += 0.1
+    #     end
 
-    a += 1
-    v += 0.1
-    end
+    # a += 1
+    # v += 0.1
+    # end
 
 
 # binding.pry
