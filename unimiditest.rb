@@ -20,6 +20,18 @@ puts "BPM?"
 tempo = gets.chomp.to_f
 
 
+def generate_tempo_arr(tempo)
+    tempoarr = []
+    tempoarr << 60/tempo
+    tempoarr << tempoarr[-1]/2
+    tempoarr << tempoarr[-1]/2
+    tempoarr
+end
+
+tempoarr = generate_tempo_arr(tempo)
+# binding.pry
+# puts tempoarr
+
 def major(note)
     major = [0, 2, 4, 5, 7, 9, 11, 12]
     major.map do |value|
@@ -69,7 +81,7 @@ def phrygian_dominant(note)
     end
 end
 
-def 
+def
 
 # def modulate(note, notet)
 
@@ -92,7 +104,8 @@ output.open do |output|
     20.times do
         note = notesarray.sample
         output.puts(0x90, note, 100)
-        sleep(rand(3)/10.to_f)
+        # sleep(rand(3)/10.to_f)
+        sleep(tempoarr.sample)
         output.puts(0x80, note, 100)
 
     end
@@ -102,7 +115,9 @@ output.open do |output|
     20.times do
         note = notesarray.sample
         output.puts(0x90, note, 100)
-        sleep(rand(3)/10.to_f)
+        # sleep(rand(3)/10.to_f)
+        sleep(tempoarr.sample)
+
         output.puts(0x80, note, 100)
 
     end
@@ -116,7 +131,9 @@ output.open do |output|
         output.puts(0x90, note+4, 100)
         output.puts(0x90, note+7, 100)
 
-        sleep(tempo)
+        # sleep(tempo)
+        sleep(tempoarr.sample)
+
         output.puts(0x80, note, 100)
         output.puts(0x80, note+4, 100)
         output.puts(0x80, note+7, 100)
