@@ -71,9 +71,9 @@ end
 
 def 
 
-def modulate(note, notet)
+# def modulate(note, notet)
 
-end
+# end
 
 output = UniMIDI::Output.gets
 
