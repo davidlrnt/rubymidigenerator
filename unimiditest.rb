@@ -67,6 +67,13 @@ def minor_arpeggio(note)
     end
 end
 
+def ionian_mode(note)
+    ionian_mode = [0, 2, 4, 5, 7, 9, 11, 12] #major?
+    ionian_mode.map do |value|
+        note + value
+    end
+end
+
 def dorian_mode(note)
     dorian_mode = [2,4,5,7,9,11,12,14]
     dorian_mode.map do |value|
@@ -79,6 +86,22 @@ def phrygian_dominant(note)
     dorian_mode.map do |value|
         note + value
     end
+end
+
+def lydian_mode(note)
+
+end
+
+def mixolydian_mode(note)
+
+end
+
+def aeolian_mode(note)
+
+end
+
+def locrian_mode(note)
+
 end
 
 # def modulate(note, notet)
